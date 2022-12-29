@@ -1,0 +1,44 @@
+.logoTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+    color: #580ABE;
+    text-shadow: 3px 2px 2px black;
+}
+
+nav{
+    background-color: #730FF6;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+header{
+    background: rgb(115,15,246);
+background: linear-gradient(180deg, rgba(115,15,246,1) 0%, rgba(255,255,255,1) 43%, rgba(221,196,253,1) 66%, rgba(115,15,246,1) 100%);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #E4D0FF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
