@@ -4,32 +4,36 @@
 
 //Modulos
 //Estilos
-import './Footer.css'
+import './Item.css'
+
 //Componentes
+import ItemCount from '../itemCount/ItemCount';
+
 //Core
 
 /*#############################################
                     Logica
 #############################################*/
+const Item = (props) => {
 
-const Footer = () => {
+    const {nombre,descripcion,categoria,precio,stock} = props.data
 
     return(
-
-        <footer>
-            <div>
-                <p>Diseñado por Gerónimo Aliatta</p>
-            </div>
-
-            <div>
-                <p>PC Gaming Store</p>
-            </div>
-        </footer>
+        
+        <div>
+            <p>{categoria}</p>
+            <p>{nombre}</p>
+            <p>{descripcion}</p>
+            <p>${precio}</p>
+            <ItemCount stock={stock}/>
+        </div>
+        
     )
+
 }
 
 /*#############################################
                     Exportaciones
 #############################################*/
 
-export default Footer;
+export default Item

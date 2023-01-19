@@ -25,8 +25,11 @@ const NavBar = () => {
             <nav>
                 <ul>
                     <li><a href='#' className='itemLista'>Home</a></li>
-                    <li><a href='#' className='itemLista'>Tienda</a></li>
-                    <li><a href='#' className='itemLista'>Juegos Gratis</a></li>
+                    <li><a href='#' className='itemLista'>Acción</a></li>
+                    <li><a href='#' className='itemLista'>Aventura</a></li>
+                    <li><a href='#' className='itemLista'>Rol</a></li>
+                    <li><a href='#' className='itemLista'>Disparos</a></li>
+                    <li><a href='#' className='itemLista'>Deportes y carreras</a></li>
                     <li><CartWidget cantidad = "7"></CartWidget></li>
                     
                 </ul>

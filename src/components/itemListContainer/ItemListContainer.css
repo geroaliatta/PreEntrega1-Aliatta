@@ -1,5 +1,6 @@
 .mainItemList{
-    height: 60vh;
+    min-height: 60vh;
+    padding: 20px 5px;
     color: #580ABE;
     font-size: 25px;
 }

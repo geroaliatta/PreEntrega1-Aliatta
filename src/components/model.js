@@ -4,32 +4,27 @@
 
 //Modulos
 //Estilos
-import './Footer.css'
+import './modeloC.css'
 //Componentes
 //Core
 
 /*#############################################
                     Logica
 #############################################*/
-
-const Footer = () => {
+const modeloC = () => {
 
     return(
-
-        <footer>
-            <div>
-                <p>Diseñado por Gerónimo Aliatta</p>
-            </div>
-
-            <div>
-                <p>PC Gaming Store</p>
-            </div>
-        </footer>
+        
+        <p >
+            modeloC
+        </p>
+        
     )
+
 }
 
 /*#############################################
                     Exportaciones
 #############################################*/
 
-export default Footer;
+export default modeloC
