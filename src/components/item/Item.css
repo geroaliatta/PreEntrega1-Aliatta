@@ -3,6 +3,7 @@
 
 .artTienda{
     height: 550px;
+    max-width: 500px;
     margin: 20px 10px;
 }
 
@@ -51,4 +52,23 @@
     font-size: 1.5rem;
     font-weight: 700;
     text-shadow: 1px 2px 2px #730FF6;
+}
+
+
+.botonInfo{
+    background-color: #730FF6;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.botonInfo:hover{
+    background-color: #580ABE;
 }

@@ -202,10 +202,11 @@ const ItemDetailContainer = () => {
     return(
         
         <section>
-            <Link to="/">Volver a lista de productos</Link>
             <div>
                 {producto}
             </div>
+
+            <Link to="/">Volver a lista de productos</Link>
         </section>
         
     )

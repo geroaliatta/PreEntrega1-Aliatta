@@ -21,7 +21,7 @@ const ItemListContainer = (props) => {
     return(
 
         <main className='mainItemList'>
-            <h2>Tienda</h2>
+            <h2 className='tituloListContainer'>Tienda</h2>
             <ItemList/>
         </main>
     )

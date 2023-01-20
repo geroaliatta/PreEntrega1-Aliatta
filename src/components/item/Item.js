@@ -29,7 +29,7 @@ const Item = (props) => {
                 <span className='categoriaTienda'>{categoria}</span>
                 <p className='descripJuego'>{descripcion}</p>
                 <span className='precioJuego'>${precio}</span>
-                <Link to={`/producto/${id}`}>Ver detalle producto</Link>
+                <Link to={`/producto/${id}`}><button className='botonInfo'>+ Info</button></Link>
                 <ItemCount stock={stock}/>
                 </div>
             </div>

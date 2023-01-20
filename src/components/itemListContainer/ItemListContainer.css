@@ -4,7 +4,7 @@
     background-image: url(../../../public/media/background/light/gaming-pattern.png);
 }
 
-h2{
+.tituloListContainer{
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     color: #580ABE;

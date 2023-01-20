@@ -1,0 +1,68 @@
+.divItemCount{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.divCantidad{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+
+.botonSuma{
+    background-color: #730FF6;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0 5px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.botonResta{
+    background-color: #730FF6;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0 5px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.botonSuma:hover{
+    background-color: #169705;
+}
+
+.botonResta:hover{
+    background-color: #f60f0f;
+}
+
+.count{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 26px;
+    padding: 0 5px;
+}
+
+.botonComprar{
+    background-color: #730FF6;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.botonComprar:hover{
+    background-color: #169705;
+}
