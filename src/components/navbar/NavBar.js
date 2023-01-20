@@ -3,6 +3,8 @@
 #############################################*/
 
 //Modulos
+import { Link } from 'react-router-dom'
+
 //Estilos
 import './NavBar.css'
 import CartWidget from '../cartWidget/CartWidget.js'
@@ -20,16 +22,17 @@ const NavBar = () => {
 
         <header>
             <div className='logoTitulo'>
-                <h1>PC Gaming Store</h1>
+                <h1><Link to="/">PC Gaming Store</Link></h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href='#' className='itemLista'>Home</a></li>
-                    <li><a href='#' className='itemLista'>Acción</a></li>
-                    <li><a href='#' className='itemLista'>Aventura</a></li>
-                    <li><a href='#' className='itemLista'>Rol</a></li>
-                    <li><a href='#' className='itemLista'>Disparos</a></li>
-                    <li><a href='#' className='itemLista'>Deportes y carreras</a></li>
+                    <li><Link to="/home" className='itemLista'>Home</Link></li>
+                    <li><Link to="/" className='itemLista'>Acción</Link></li>
+                    <li><Link to="/" className='itemLista'>Aventura</Link></li>
+                    <li><Link to="/" className='itemLista'>Rol</Link></li>
+                    <li><Link to="/" className='itemLista'>Disparos</Link></li>
+                    <li><Link to="/" className='itemLista'>Deportes y carreras</Link></li>
+                    <li><Link to="/aboutus" className='itemLista'>Nosotros</Link></li>
                     <li><CartWidget cantidad = "7"></CartWidget></li>
                     
                 </ul>
