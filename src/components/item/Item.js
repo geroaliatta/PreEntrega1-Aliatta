@@ -21,15 +21,19 @@ const Item = (props) => {
 
     return(
         
-        <div>
-            <p>{nombre}</p>
-            <img src={imagen} alt={nombre}></img>
-            <p>{categoria}</p>
-            <p>{descripcion}</p>
-            <p>${precio}</p>
-            <Link to={`/producto/${id}`}>Ver detalle producto</Link>
-            <ItemCount stock={stock}/>
-        </div>
+        <article className='artTienda'>
+            <div className='divTienda'>
+                <img src={imagen} alt={nombre} className='imgTienda'></img>
+                <div className='divTiendaCont'>
+                <h3 className='tituloTienda'>{nombre}</h3>
+                <span className='categoriaTienda'>{categoria}</span>
+                <p className='descripJuego'>{descripcion}</p>
+                <span className='precioJuego'>${precio}</span>
+                <Link to={`/producto/${id}`}>Ver detalle producto</Link>
+                <ItemCount stock={stock}/>
+                </div>
+            </div>
+        </article>
         
     )
 

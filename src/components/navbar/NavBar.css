@@ -3,9 +3,11 @@
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    padding: 30px 0;
 }
 
 h1{
+    font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
     color: #580ABE;
     text-shadow: 3px 2px 2px black;
@@ -13,13 +15,12 @@ h1{
 
 nav{
     background-color: #730FF6;
-    margin-top: 20px;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 header{
     background: rgb(115,15,246);
-background: linear-gradient(180deg, rgba(115,15,246,1) 0%, rgba(255,255,255,1) 43%, rgba(221,196,253,1) 66%, rgba(115,15,246,1) 100%);
+    background-image: url(../../../public/media/background/light/white-waves.png);
 }
 
 header nav ul {

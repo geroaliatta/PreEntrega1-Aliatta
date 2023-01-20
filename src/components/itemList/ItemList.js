@@ -51,10 +51,9 @@ const ItemList = (props) => {
 
     return(
         
-        <div>
-            <p>Este es el ItemList</p>
+        <section className='sectionTienda'>
             {productos}
-        </div>
+        </section>
         
     )
 

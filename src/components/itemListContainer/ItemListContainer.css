@@ -1,6 +1,13 @@
 .mainItemList{
     min-height: 60vh;
     padding: 20px 5px;
+    background-image: url(../../../public/media/background/light/gaming-pattern.png);
+}
+
+h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
     color: #580ABE;
-    font-size: 25px;
+    text-shadow: 3px 2px 2px black;
+    padding: 20px 0;
 }

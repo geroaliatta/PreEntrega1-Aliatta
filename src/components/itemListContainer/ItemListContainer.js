@@ -21,7 +21,7 @@ const ItemListContainer = (props) => {
     return(
 
         <main className='mainItemList'>
-            <p>Este es el ItemListContainer</p>          
+            <h2>Tienda</h2>
             <ItemList/>
         </main>
     )
