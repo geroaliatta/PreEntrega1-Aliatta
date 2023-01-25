@@ -11,6 +11,8 @@ import './ItemDetailContainer.css'
 
 //Componentes
 import ItemDetail from '../itemDetail/ItemDetail'
+import ItemList from '../itemList/ItemList'
+
 //Core
 
 /*#############################################
@@ -201,12 +203,17 @@ const ItemDetailContainer = () => {
 
     return(
         
-        <section>
-            <div>
-                {producto}
-            </div>
-
-            <Link to="/">Volver a lista de productos</Link>
+        <section className='sectItemDetail'>
+            <article className='artItemDetail'>
+                <div>
+                    {producto}
+                </div>
+                <Link to="/" className='volver'>Volver</Link>
+            </article>
+            <article>
+                <h3 className='titMasJuegos'>Más Juegos...</h3>
+                <ItemList/>
+            </article>
         </section>
         
     )

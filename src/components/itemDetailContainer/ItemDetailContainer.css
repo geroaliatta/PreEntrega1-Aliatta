@@ -1,0 +1,27 @@
+.sectItemDetail{
+    background-image: url(../../../public/media/background/light/gaming-pattern.png);
+}
+
+.artItemDetail{
+    background-image: url(../../../public/media/background/light/shattered.png);
+}
+
+.volver{
+    color: #730FF6;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 1px #000000;
+    text-decoration: none;
+}
+
+.volver:hover{
+    color: aquamarine;
+}
+
+.titMasJuegos{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.6rem;
+    color: #580ABE;
+    text-shadow: 3px 2px 2px black;
+    padding: 20px 10px;
+}

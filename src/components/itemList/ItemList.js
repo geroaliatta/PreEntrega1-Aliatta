@@ -21,7 +21,7 @@ const ItemList = (props) => {
 //API de productos
 
     useEffect(()=>{
-        fetch('../../misProductosjson.json')
+        fetch('../../data.json')
         .then(res=>res.json())
         .then(json=> setProductos(json.map(productos => <Item key={productos.id} id={"producto"+ productos.id} data={productos}/>)))
 

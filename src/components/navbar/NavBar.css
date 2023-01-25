@@ -13,6 +13,20 @@ h1{
     text-shadow: 3px 2px 2px black;
 }
 
+h1 a{
+    text-decoration: none;
+}
+
+h1 a:visited{
+    color: #580ABE;
+}
+
+h1 a:hover{
+    color: #730FF6;
+    text-shadow: 4px 3px 3px black;
+}
+
+
 nav{
     background-color: #730FF6;
     padding: 15px 0;
@@ -35,11 +49,13 @@ header nav ul li a{
     color: #E4D0FF;
     font-size: 1.5rem;
     font-weight: bold;
+    text-shadow: 3px 2px 2px black;
 }
 
 header nav ul li a:hover {
     color: #FFFFFF;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
     transition: 0.3s;
+    text-shadow: 5px 3px 3px black;
 }

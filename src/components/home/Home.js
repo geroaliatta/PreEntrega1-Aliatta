@@ -18,7 +18,7 @@ const Home = () => {
         <section>
             <h1>HOME</h1>
             <p>Página en proceso, próximamente...</p>
-            <video src='../../media/video/pcgaming1.mp4' loop muted className='videoHome'></video>
+            <video src='../../media/video/pcgaming1.mp4' loop autoPlay muted className='videoHome'></video>
         </section>
         
     )
