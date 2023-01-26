@@ -1,7 +1,7 @@
 /*#############################################
                     Importaciones
 #############################################*/
-//ESTOY EN RAMA PRUEBA
+
 //Modulos
 import { useEffect, useState} from 'react'
 import { Link, useParams } from 'react-router-dom'
@@ -42,10 +42,6 @@ const ItemDetailContainer = () => {
                 </div>
                 <Link to="/" className='volver'>Volver</Link>
             </article>
-            {/* <article>
-                <h3 className='titMasJuegos'>Más Juegos...</h3>
-                <ItemList/>
-            </article> */}
         </section>
         
     )

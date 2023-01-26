@@ -17,7 +17,7 @@ const AboutUs = () => {
         
         <section>
             <h1>NOSOTROS</h1>
-            <p>Página en proceso, próximamente...</p>
+            <p className='enProceso'>Página en proceso, próximamente...</p>
         </section>
         
     )

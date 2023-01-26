@@ -48,13 +48,12 @@ header nav ul li a{
     text-decoration: none;
     color: #E4D0FF;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
     text-shadow: 3px 2px 2px black;
 }
 
 header nav ul li a:hover {
     color: #FFFFFF;
-    font-size: 1.6rem;
     font-weight: 700;
     transition: 0.3s;
     text-shadow: 5px 3px 3px black;

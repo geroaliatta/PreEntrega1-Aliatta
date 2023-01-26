@@ -15,10 +15,15 @@ const Home = () => {
 
     return(
         
-        <section>
-            <h1>HOME</h1>
-            <p>Página en proceso, próximamente...</p>
+        <section className='sectionHome'>
+            
             <video src='../../media/video/pcgaming1.mp4' loop autoPlay muted className='videoHome'></video>
+            <div className='divHome'>
+                <h1>SI BUSCABAS LOS MEJORES JUEGOS,<br></br>
+                    PC GAMING STORE ES TU LUGAR!
+                </h1>
+                {/* <p>Página en proceso, próximamente...</p> */}
+            </div>
         </section>
         
     )
