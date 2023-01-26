@@ -3,6 +3,7 @@
 #############################################*/
 
 //Modulos
+import ReactPlayer from 'react-player/youtube'
 //Estilos
 import './ItemDetail.css'
 //Componentes
@@ -14,7 +15,7 @@ import ItemCount from '../itemCount/ItemCount'
 #############################################*/
 const ItemDetail = (props) => {
 
-    const {nombre,descripcion,categoria,precio,stock, imagen} = props.data
+    const {nombre,descripcion,categoria,precio,stock, imagen, video} = props.data
 
     return(
         
@@ -28,7 +29,7 @@ const ItemDetail = (props) => {
                 <p className='stockDetail'>Stock disponible: {stock}</p>
                 <ItemCount stock={stock}/>
             </div>
-            <iframe width="50%" height="540" src="https://www.youtube.com/embed/HqQMh_tij0c?controls=0&amp;start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <ReactPlayer playing= 'true' controls='true' width='50%' height='535px' url={video} />
         </article>
         
     )

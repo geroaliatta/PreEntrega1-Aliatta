@@ -39,6 +39,7 @@ root.render(
         <Route exact path='/' element={<ItemListContainer/>}/>
         <Route exact path='/home' element={<Home/>}/>
         <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
+        <Route exact path='/productos/:productosCategoria' element={<ItemListContainer/>} />
         <Route exact path='/aboutus' element={<AboutUs/>}/>
       </Routes>
       

@@ -27,11 +27,11 @@ const NavBar = () => {
             <nav>
                 <ul>
                     <li><Link to="/home" className='itemLista'>Home</Link></li>
-                    <li><Link to="/" className='itemLista'>Acción</Link></li>
-                    <li><Link to="/" className='itemLista'>Aventura</Link></li>
-                    <li><Link to="/" className='itemLista'>Rol</Link></li>
-                    <li><Link to="/" className='itemLista'>Disparos</Link></li>
-                    <li><Link to="/" className='itemLista'>Deportes y carreras</Link></li>
+                    <li><Link to="/productos/Acción" className='itemLista'>Acción</Link></li>
+                    <li><Link to="/productos/Aventura" className='itemLista'>Aventura</Link></li>
+                    <li><Link to="/productos/Rol" className='itemLista'>Rol</Link></li>
+                    <li><Link to="/productos/Disparos" className='itemLista'>Disparos</Link></li>
+                    <li><Link to="/productos/Deportes y carreras" className='itemLista'>Deportes y carreras</Link></li>
                     <li><Link to="/aboutus" className='itemLista'>Nosotros</Link></li>
                     <li><CartWidget cantidad = "7"></CartWidget></li>
                     
