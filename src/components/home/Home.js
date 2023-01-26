@@ -22,7 +22,6 @@ const Home = () => {
                 <h1>SI BUSCABAS LOS MEJORES JUEGOS,<br></br>
                     PC GAMING STORE ES TU LUGAR!
                 </h1>
-                {/* <p>Página en proceso, próximamente...</p> */}
             </div>
         </section>
         
