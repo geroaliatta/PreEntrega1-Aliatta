@@ -1,14 +1,15 @@
 .sectionHome{
-    height: 1080px;
+    height: 1070px;
 }
 
 .videoHome{
     position: absolute;
     top: 166px;
+    width: 100%;
 }
 
 .divHome{
-    position: absolute;
+    position:relative;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 20px;
