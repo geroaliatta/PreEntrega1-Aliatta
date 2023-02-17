@@ -4,19 +4,19 @@
 
 //Modulos
 //Estilos
-import './modeloC.css'
+import './Form.css'
 //Componentes
 //Core
 
 /*#############################################
                     Logica
 #############################################*/
-const modeloC = () => {
+const Form = () => {
 
     return(
         
         <div>
-            modeloC
+            Form
         </div>
         
     )
@@ -27,4 +27,4 @@ const modeloC = () => {
                     Exportaciones
 #############################################*/
 
-export default modeloC
+export default Form

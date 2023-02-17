@@ -13,48 +13,41 @@ import './ItemCount.css'
 /*#############################################
                     Logica
 #############################################*/
-const ItemCount = (props) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
     
 
     //Agregar un manejo de estado - useState
 
-    const [count,setCount] = useState(0)
+    const [count,setCount] = useState(initial);
 
     //Funciones de suma y de resta
 
     const addOne = () => {
-        if (count < props.stock) {
-
-        setCount(count + 1)
+        if (count < stock) {
+            setCount(count + 1)
         }
     }
 
     const disOne = () => {
-
-        if (count > 0) {
-
-        setCount(count - 1)
+        if (count > 1) {
+            setCount(count - 1)
+        
         }
     }
 
-    //Funcion agregar
 
-    const onAdd = () => {
-        console.log(count);
-    }
+    return (
 
-    return(
-        
         <div className='divItemCount'>
             <div className='divCantidad'>
-                <button onClick={addOne} className='botonSuma'>+</button>
-                <span className='count'>{count}</span>
-                <button onClick={disOne} className='botonResta'>-</button>
+                <button disabled={stock === 0} onClick={disOne} className='botonResta'>-</button>
+                <p className='count'>{count}</p>
+                <button disabled={stock === 0} onClick={addOne} className='botonSuma'>+</button>
             </div>
-            <button onClick={onAdd} className='botonComprar'>Comprar</button>
+            <button disabled={stock === 0} onClick={()=>onAdd(count)} className='botonComprar'>Comprar</button>
         </div>
-        
+
     )
 
 }

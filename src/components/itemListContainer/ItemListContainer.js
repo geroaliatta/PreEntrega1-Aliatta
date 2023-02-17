@@ -3,14 +3,17 @@
 #############################################*/
 
 //Modulos
-import { useState , useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState , useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { ThreeCircles } from 'react-loader-spinner';
 
 //Estilos
 import './ItemListContainer.css'
 
 //Componentes
 import ItemList from '../itemList/ItemList';
+import { db } from '../../services/firebase';
 
 //Core
 
@@ -18,32 +21,55 @@ import ItemList from '../itemList/ItemList';
                     Logica
 #############################################*/
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
 
     const [productos,setProductos] = useState([])
     const {productosCategoria} = useParams();
 
     useEffect(()=>{
-        fetch('../../data.json')
-        .then(res=>res.json())
-        .then(json=> {
-            if (productosCategoria) {
-                setProductos(
-                    json.productos.filter((producto) => producto.categoria === productosCategoria)
-                )
-            } else {
-                setProductos(json.productos)
-            }
-        })
+        const getData = async()=>{
+
+            const queryRef = productosCategoria ? query(collection(db,"ListaProductos") , where("categoria","==",productosCategoria)) : collection(db,"ListaProductos");
+
+            const response = await getDocs(queryRef);
+            const docsInfo = response.docs.map(doc=>{
+                const newDoc = {
+                    id:doc.id,
+                    ...doc.data()
+                }
+                return newDoc
+            });
+
+            setProductos(docsInfo);
+
+        }
+        getData();
 
     },[productosCategoria])
     
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            }, 2000);
+        }, []);
+    
+
     return(
 
         <main className='mainItemList'>
-            <h2 className='tituloListContainer'>Tienda</h2>
-            <ItemList productos={productos}/>
+            
+            {loading ? (
+                <ThreeCircles color="#580ABE"/>
+            ) : (
+                <article>
+                    <h2 className='tituloListContainer'>Tienda</h2>
+                    <ItemList productos={productos}/>
+                </article>
+            )}   
         </main>
     )
 }

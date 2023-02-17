@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import './Item.css'
 
 //Componentes
-import ItemCount from '../itemCount/ItemCount';
 
 //Core
 
@@ -31,7 +30,6 @@ const Item = (props) => {
                 <p className='descripJuego'>{descripcion}</p>
                 <span className='precioJuego'>${precio}</span>
                 <Link to={`/producto/${id}`}><button className='botonInfo'>+ Info</button></Link>
-                <ItemCount stock={stock}/>
                 </div>
             </div>
         </article>

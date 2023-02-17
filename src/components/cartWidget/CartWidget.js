@@ -3,9 +3,11 @@
 #############################################*/
 
 //Modulos
+import { useContext } from 'react';
 //Estilos
 import './CartWidget.css'
 //Componentes
+import { CartContext } from '../../context/CartContext';
 //Core
 //Icons
 import React from 'react'
@@ -18,11 +20,15 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const CartWidget = (props) => {
 
-    return(
+    const {getTotalItems} = useContext(CartContext);
 
-        <p className='cartText'> 
-            <FontAwesomeIcon className="iconoCarrito" icon={faCartShopping} /> {props.cantidad}
-        </p>
+    return(
+        <div>
+            <p className='cartText'> 
+            <FontAwesomeIcon className="iconoCarrito" icon={faCartShopping} /> {getTotalItems()}
+            </p>
+        </div>
+        
     )
 }
 

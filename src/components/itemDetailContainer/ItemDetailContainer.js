@@ -3,15 +3,16 @@
 #############################################*/
 
 //Modulos
-import { useEffect, useState} from 'react'
-import { Link, useParams } from 'react-router-dom'
-
+import { useEffect, useState} from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { doc, getDoc } from "firebase/firestore";
+import {db} from "../../services/firebase";
+import { ThreeCircles} from  'react-loader-spinner';
 //Estilos
 import './ItemDetailContainer.css'
 
 //Componentes
 import ItemDetail from '../itemDetail/ItemDetail'
-// import ItemList from '../itemList/ItemList'
 
 //Core
 
@@ -20,28 +21,48 @@ import ItemDetail from '../itemDetail/ItemDetail'
 #############################################*/
 const ItemDetailContainer = () => {
 
-    const [producto,setProducto] = useState({})
-    const {productoId} = useParams()
+    const {productoId} = useParams();
+    const [item,setItem] = useState({});
+
 
     useEffect(()=>{
-        fetch('../../data.json')
-        .then(res=>res.json())
-        .then(data=>setProducto(data.productos.find((item) => item.id === parseInt(productoId))))
+        const getProducto = async()=>{
+            const queryRef = doc(db,"ListaProductos",productoId);
+            const response = await getDoc(queryRef);
+            const newDoc = {
+                id:response.id,
+                ...response.data()
+            }
+            setItem(newDoc);
+        }
+        getProducto();
     }, [productoId])
 
 
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+        setLoading(false);
+        }, 1000);
+    }, []);
 
 
 
     return(
         
         <section className='sectItemDetail'>
-            <article className='artItemDetail'>
-                <div>
-                    <ItemDetail data={producto} />
-                </div>
-                <Link to="/" className='volver'>Volver</Link>
-            </article>
+            {loading ? (
+                <ThreeCircles color="#580ABE"/>
+            ) : (
+                <article className='artItemDetail'>
+                    <div>
+                        <ItemDetail item={item} />
+                    </div>
+                    <Link to="/" className='volver'>Volver</Link>
+                </article>
+            )}            
         </section>
         
     )
@@ -53,3 +74,7 @@ const ItemDetailContainer = () => {
 #############################################*/
 
 export default ItemDetailContainer
+
+
+
+

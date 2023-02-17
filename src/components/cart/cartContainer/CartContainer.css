@@ -1,0 +1,82 @@
+.titCarrito{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #580ABE;
+    text-shadow: 3px 2px 2px black;
+    padding: 20px 0;
+    display: block;
+}
+
+.cartContainer{
+    background-image: url(../../../../public/media/background/light/gaming-pattern.png);
+    display: flex;
+    flex-direction: column;
+}
+
+.divItemsCart{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.divItemsCart2{
+    display: flex;
+    flex-direction: column;
+}
+
+.itemCart{
+    padding: 5px;
+}
+
+.vaciarCarrito{
+        background-color: #730FF6;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 20px 40px;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 36px;
+        cursor: pointer;
+        align-self: center;
+}
+
+.vaciarCarrito:hover{
+    background-color: #f60f0f;
+}
+
+.divLinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.totalCompra{
+    color: #730FF6;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px #000000;
+    text-decoration: none;
+}
+
+.linkCart{
+    color: #730FF6;
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px #000000;
+    text-decoration: none;
+}
+
+.linkCart:hover{
+    color: #420099;
+    font-weight: 700;
+
+}
+
+.noJuegos{
+    color: #730FF6;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px #000000;
+    text-decoration: none;
+}

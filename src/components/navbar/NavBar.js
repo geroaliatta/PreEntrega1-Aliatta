@@ -33,7 +33,7 @@ const NavBar = () => {
                     <li><Link to="/productos/Disparos" className='itemLista'>Disparos</Link></li>
                     <li><Link to="/productos/Deportes y carreras" className='itemLista'>Deportes y carreras</Link></li>
                     <li><Link to="/aboutus" className='itemLista'>Nosotros</Link></li>
-                    <li><CartWidget cantidad = "7"></CartWidget></li>
+                    <li><Link to="/carrito"><CartWidget cantidad = "7"></CartWidget></Link></li>
                     
                 </ul>
             </nav>
