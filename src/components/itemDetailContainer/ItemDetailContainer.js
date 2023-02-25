@@ -54,13 +54,16 @@ const ItemDetailContainer = () => {
         
         <section className='sectItemDetail'>
             {loading ? (
-                <ThreeCircles color="#580ABE"/>
+                <ThreeCircles color='#580ABE'/>
             ) : (
                 <article className='artItemDetail'>
                     <div>
                         <ItemDetail item={item} />
                     </div>
-                    <Link to="/" className='volver'>Volver</Link>
+                    <div className='divLinks'>
+                        <Link to='/' className='volver'>Volver</Link>
+                        <Link to='/carrito' className='volver'>Ir al carrito</Link>
+                    </div>
                 </article>
             )}            
         </section>

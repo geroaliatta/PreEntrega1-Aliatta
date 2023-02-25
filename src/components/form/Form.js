@@ -118,9 +118,10 @@ const Formulario = () => {
                             <h2 className='tituloForm'>Ya casi es tuyo...</h2>
                             {!compraFinalizada ? (
                                 <article className='articleForm'>
-                                    <h3 className='tituloForm2'>Resumen de compra</h3>
+                                    
                                     <div className='divResumenCompra'>
                                         <div>
+                                            <h3 className='tituloForm2'>Completá tus datos</h3>
                                             <div>
                                                 <label htmlFor='nombre'>Nombre:</label>
                                                 <Field type='text' id='nombre' name='nombre' placeholder='Escribí tu nombre...' />
@@ -152,6 +153,7 @@ const Formulario = () => {
                                             </div>
                                         </div>
                                         <div className='divTabla'>
+                                            <h3 className='tituloForm2'>Resumen de compra</h3>
                                             <table className='tablaCompra'>
                                                 <thead>
                                                     <tr>
