@@ -115,45 +115,79 @@ const Formulario = () => {
                 {({ errors }) => (
                     <Form>
                         <section>
+                            <h2 className='tituloForm'>Ya casi es tuyo...</h2>
                             {!compraFinalizada ? (
+                                <article className='articleForm'>
+                                    <h3 className='tituloForm2'>Resumen de compra</h3>
+                                    <div className='divResumenCompra'>
+                                        <div>
+                                            <div>
+                                                <label htmlFor='nombre'>Nombre:</label>
+                                                <Field type='text' id='nombre' name='nombre' placeholder='Escribí tu nombre...' />
+                                                <ErrorMessage name="nombre" component={() => (<div className="error">{errors.nombre}</div>)} />
+                                            </div>
 
+                                            <div>
+                                                <label htmlFor='apellido'>Apellido:</label>
+                                                <Field type='text' id='apellido' name='apellido' placeholder='Escribí tu apellido...' />
+                                                <ErrorMessage name="apellido" component={() => (<div className="error">{errors.apellido}</div>)} />
+                                            </div>
 
-                                <article>
-                                    <div>
-                                        <label htmlFor='nombre'>Nombre:</label>
-                                        <Field type='text' id='nombre' name='nombre' placeholder='Escribí tu nombre...' />
-                                        <ErrorMessage name="nombre" component={() => (<div className="error">{errors.nombre}</div>)} />
-                                    </div>
-                                    
-                                    <div>
-                                        <label htmlFor='apellido'>Apellido:</label>
-                                        <Field type='text' id='apellido' name='apellido' placeholder='Escribí tu apellido...' />
-                                        <ErrorMessage name="apellido" component={() => (<div className="error">{errors.apellido}</div>)} />
-                                    </div>
-                                    
-                                    <div>
-                                        <label htmlFor='telefono'>Teléfono:</label>
-                                        <Field type='number' id='telefono' name='telefono' placeholder='Escribí tu teléfono...' />
-                                        <ErrorMessage name="telefono" component={() => (<div className="error">{errors.telefono}</div>)} />
-                                    </div>
-                                    
-                                    <div>
-                                        <label htmlFor='mail'>E-mail:</label>
-                                        <Field type='email' id='mail' name='mail' placeholder='Escribí tu E-mail...' />
-                                        <ErrorMessage name="mail" component={() => (<div className="error">{errors.mail}</div>)} />
-                                    </div>
-                                    
-                                    <div>
-                                        <label htmlFor='mail2'>Confirmación de E-mail:</label>
-                                        <Field type='email' id='mail2' name='mail2' placeholder='Repetí tu E-mail...' />
-                                        <ErrorMessage name="mail2" component={() => (<div className="error">{errors.mail2}</div>)} />
-                                    </div>
-                                    <button type='submit'>¡Comprar ahora!</button>
+                                            <div>
+                                                <label htmlFor='telefono'>Teléfono:</label>
+                                                <Field type='number' id='telefono' name='telefono' placeholder='Escribí tu teléfono...' />
+                                                <ErrorMessage name="telefono" component={() => (<div className="error">{errors.telefono}</div>)} />
+                                            </div>
 
+                                            <div>
+                                                <label htmlFor='mail'>E-mail:</label>
+                                                <Field type='email' id='mail' name='mail' placeholder='Escribí tu E-mail...' />
+                                                <ErrorMessage name="mail" component={() => (<div className="error">{errors.mail}</div>)} />
+                                            </div>
+
+                                            <div>
+                                                <label htmlFor='mail2'>Confirmación de E-mail:</label>
+                                                <Field type='email' id='mail2' name='mail2' placeholder='Repetí tu E-mail...' />
+                                                <ErrorMessage name="mail2" component={() => (<div className="error">{errors.mail2}</div>)} />
+                                            </div>
+                                        </div>
+                                        <div className='divTabla'>
+                                            <table className='tablaCompra'>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Juego</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Precio</th>
+                                                    </tr>
+                                                </thead>
+
+                                                {
+                                                    cartItems.map(item => (
+                                                        <tbody>
+                                                            <td className='tituloJuego'>{item.nombre}</td>
+                                                            <td className='numForm'>{item.quantity}</td>
+                                                            <td className='numForm'>$ {item.totalPrice}</td>
+                                                        </tbody>
+                                                    ))
+                                                }
+
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>TOTAL</th>
+                                                        <th></th>
+                                                        <th className='totalForm'>$ {totalPriceCart()}</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <button type='submit' className='botonComprarForm'>¡Comprar ahora!</button>
                                 </article>
+                                
                             ) : (
                                 <div>
-                                    <h3>LOS JUEGOS SON TUYOS, A VICIAR!</h3>
+                                    <h2 className='tituloForm'>LOS JUEGOS SON TUYOS, A VICIAR!</h2>
                                     <div>
                                         <p>¡Muchas gracias por tu compra {orderInfo.cliente.nombre} {orderInfo.cliente.apellido}! El ID de tu compra es el {orderId}. En breve recibirás a tu mail {orderInfo.cliente.mail} las intrucciones para realizar el pago por un total de $ {orderInfo.total}, el mismo puede demorar hasta 48 horas hábiles en impactar. Una vez impactado, te daremos acceso a los juegos adquiridos. Ante cualquier inconveniente nos contactaremos telefónicamente al número informado {orderInfo.cliente.telefono}. ¡Saludos! </p>
                                     </div>
