@@ -1,7 +1,7 @@
 # PC Gaming Store
 Proyecto final curso React Js - CoderHouse Comisión 34880
 
-**Se podrá descartar la carpeta ZIP a través de GitHub para acceder al proyecto o el mismo está disponible para su visualización en Netlify ingresando en [https://pcgamingstore.netlify.app/](https://pcgamingstore.netlify.app/).
+**Se podrá descargar la carpeta ZIP a través de GitHub para acceder al proyecto o el mismo está disponible para su visualización en Netlify ingresando en [https://pcgamingstore.netlify.app/](https://pcgamingstore.netlify.app/).**
 
 ## Introducción al proyecto
 
