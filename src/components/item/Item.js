@@ -17,7 +17,7 @@ import './Item.css'
 #############################################*/
 const Item = (props) => {
 
-    const {nombre,descripcion,categoria,precio,stock, imagen, id} = props.data
+    const {nombre,descripcion,categoria,precio, imagen, id} = props.data
 
     return(
         

@@ -85,7 +85,7 @@ const Formulario = () => {
                     // Validacion mail2
                     if (!valores.mail2) {
                         errores.mail2 = 'Por favor repetí tu E-mail'
-                    } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.mail2)) {
+                    } else if (valores.mail !== valores.mail2) {
                         errores.mail2 = 'El E-mail debe ser igual al anterior.'
                     }
 
